@@ -1,4 +1,8 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+
+
+const smtpPassword = process.env.SMTP_PASSWORD;
 
 const callbackController = {
   requestCallback: async (req, res) => {
@@ -25,7 +29,7 @@ async function sendEmailNotification({ name, contactNumber }) {
     port: 587,
     auth: {
         user: 'bablysingh2409@gmail.com',
-        pass: 'gdgq yksx aizi nygj'
+        pass: smtpPassword
     }
   });
 
@@ -33,7 +37,7 @@ async function sendEmailNotification({ name, contactNumber }) {
   // Email content
   const emailContent = {
     from: 'bablysingh2409@gmail.com',
-    to: 'ravi@anchors.in',
+    to: 'singhlovely1309@gmail.com',
     subject: 'Callback Request',
     text: `Callback request details:\nName: ${name}\nContact Number: ${contactNumber}`,
   };
