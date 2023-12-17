@@ -1,6 +1,5 @@
 
 const Video = require('../model/video');
-
 const videoController = {
     saveVideoDetails:async(req,res)=>{
         try{

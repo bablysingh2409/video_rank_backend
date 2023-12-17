@@ -5,7 +5,7 @@ const videoSchema = new mongoose.Schema({
   thumbnail: String,
   views: Number,
   likes: Number,
-  comments: Number,
+  comments: Number, 
   estimatedEarning: Number,
   date:Date
 }, { timestamps: true });

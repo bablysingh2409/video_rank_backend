@@ -3,7 +3,6 @@ require('dotenv').config();
 
 
 const smtpPassword = process.env.SMTP_PASSWORD;
-
 const callbackController = {
   requestCallback: async (req, res) => {
     try {
